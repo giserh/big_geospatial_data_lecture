@@ -1,3 +1,4 @@
+// Modified by M.Werner for the lecture Big Geospatial Data
 // Some source adapted from http://www.dash-project.org/tutorial/tutorial.html#astro_load_image
 
 #include <iostream>
@@ -33,7 +34,7 @@ struct RGB
   uint8 r;
   uint8 g;
   uint8 b;
-  uint32_t brightness() const { return (uint32_t) r + (uint32_t) g + (uint32_t) b; }
+
   RGB():r(0),g(0),b(0){};
   RGB(uint8 _r,uint8 _g,uint8 _b): r(_r),g(_g),b(_b){};
 };
@@ -85,11 +86,6 @@ int main( int argc, char* argv[] ) {
             TIFFReadEncodedStrip( tif, strip, buf, (tsize_t) -1 );
             RGB* rgb= (RGB*) buf;
 
-            /*std::for_each( rgb, rgb + width * rowsperstrip, [](RGB& rgb) {
-                std::swap<uint8_t>( rgb.r, rgb.b );
-            } );*/
-
-
             for ( uint32_t l= 0; ( l < rowsperstrip ) && (line+l < height); l++ ) {
 
                 iter = std::copy( rgb, rgb+width, iter );
@@ -108,7 +104,7 @@ int main( int argc, char* argv[] ) {
 	*/
        start = system_clock::now();
 
-
+      // Here, you can add any code that operates on the image.
 
        end = system_clock::now();
 	 cout << "processed image in "<< std::chrono::duration_cast<std::chrono::seconds> (end-start).count() << " seconds" << endl;
@@ -119,7 +115,7 @@ int main( int argc, char* argv[] ) {
     std::cout << "Writing some excerpts" << endl;
     start = std::chrono::system_clock::now();
 
-    #pragma omp parallel for
+  
     for (size_t k=0; k < 10; k++)
     {
         size_t exc_x = rand() % (width-exc_width-1);
