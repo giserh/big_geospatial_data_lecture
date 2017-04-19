@@ -14,8 +14,11 @@ Information on the dataset is available at
 # Prepare R for this type of data
 
 Install GDAL for your system, for example
+
 	sudo apt-get install libgdal-dev libproj-dev
+
 Install rgdal, z.B.
+
 	sudo R
 	> install.packages("rgdal")
 	> install.packages("raster");
