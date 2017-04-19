@@ -7,6 +7,6 @@ it on Github in another repository
 
 # Mini-Howto
 
-   sudo apt-get install python-opencv # for Debian / Ubuntu
-   git clone https://github.com/shantnu/FaceDetect/
+     sudo apt-get install python-opencv # for Debian / Ubuntu
+     git clone https://github.com/shantnu/FaceDetect/
 
