@@ -1,0 +1,35 @@
+This file lists all contributors to this project. With each contribution,
+you should add yourself to the appropriate section of this file. 
+Additionally, you grant Martin Werner the right to modify and publish 
+your contributions and to transfer copyright to a commercial publisher 
+(e.g., Springer or others).
+
+Of course, your contributions will be credited in a preface to the envisioned
+book or article.
+
+
+Principal Contriutor / Project Head:
+Martin Werner <martin.werner@ikg.uni-hannover.de>
+
+Individual Case Studies and Examples:
+
+- Example Case Study Entry 
+  Contributed By: <max.mustermann@long-living-email-adress.com>
+  Copyright: GPL (or any other Open Source License
+  Short Description of what the entry does, what it highlights.
+  
+
+Ports to Other Environments
+
+- Example Port: Port of Night to Fortran
+  Original Directory:    examples/night
+  Original Contributor:  Martin Werner
+  Port Directory:        examples/night/ports/fortran
+
+
+
+Minor Corrections (typos, etc.): (just list your name and email)
+
+
+
+

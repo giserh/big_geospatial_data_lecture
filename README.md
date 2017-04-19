@@ -10,4 +10,7 @@ There are three simple rules for contributing:
 - Add yourself with a long-living contact address (e.g., private email) to 
   the contributors file within your pull request
 - Add yourself to the right section there
+- Transfer the copyright to me in order to allow me to publish it later in
+  contract with a commercial publisher
+
 
