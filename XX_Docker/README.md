@@ -16,7 +16,7 @@ If you want to run it, just install docker and do
 
          docker run -it mwernerds/bgd:latest bash
 
-This will bring download it, if needed. If you want
+This will download it, if needed. If you want
 to share a directory or to use the X windows system (for interactive
 plotting for example), just use the xrun script
 
