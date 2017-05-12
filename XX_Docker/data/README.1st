@@ -1,0 +1,3 @@
+The xrun script mounts this directory to the container. You can seamlessly
+share files between the host computer and the docker container.
+

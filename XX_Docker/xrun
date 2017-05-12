@@ -1,0 +1,14 @@
+#!/bin/bash
+# Allow access to the local screen 
+# By default, a docker container is a foreign computer and thus not allowed
+# to use your screen...
+
+
+
+XSOCK=/tmp/.X11-unix
+XAUTH=/tmp/.docker.xauth
+
+xauth nlist :0 | sed -e 's/^..../ffff/' | xauth -f $XAUTH nmerge -
+
+
+docker run -ti -v $(pwd)/data:/home/bgd/data -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH $@

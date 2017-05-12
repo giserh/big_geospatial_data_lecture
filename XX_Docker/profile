@@ -1,0 +1,7 @@
+export PS1="\u@bgd:\w\$ "
+echo "Welcome to Big Geospatial Data"
+echo "Questions go to <martin@martinwerner.de>"
+echo "The data directory should be mounted to your host"
+echo "You are on Container ID: "$(hostname)
+echo "Run hostname at any time to find it out, again"
+echo "Do something great with it:" 
