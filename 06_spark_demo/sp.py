@@ -5,6 +5,7 @@ import tempfile;
 import sys
 from plyfile import PlyData, PlyElement
 import numpy as np;
+import time;
 
 
 extent = [545605, 545680, 5800690, 5800765];
@@ -48,8 +49,16 @@ def scanPly(url):
     tf = tempfile.NamedTemporaryFile()
     temp_file_name = tf.name
     tf.close()
-
-    request.urlretrieve (url, temp_file_name)
+    for i in range(1,10): # up to ten retries (server might be unfriendly as all requests come in at the same time)
+        try:
+            request.urlretrieve (url, temp_file_name)
+        except :
+            print("Failed for %s - retrying in 5s" % (url))
+            time.sleep(5)
+        else :
+            #stops the inner loop if there is no error
+            break
+        
     # Load the temp file back into a numpy array data
     plydata = PlyData.read(temp_file_name)
     data = np.column_stack([plydata["vertex"]["x"],plydata["vertex"]["y"],plydata["vertex"]["z"]])

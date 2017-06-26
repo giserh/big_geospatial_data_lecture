@@ -13,4 +13,3 @@ There are three simple rules for contributing:
 - Transfer the copyright to me in order to allow me to publish it later in
   contract with a commercial publisher
 
-
