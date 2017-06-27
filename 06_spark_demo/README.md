@@ -384,5 +384,11 @@ Now you are remotely at Amazon (good Internet connection ;-)
 ```
 sudo -s 
 wget https://raw.githubusercontent.com/mwernerds/big_geospatial_data_lecture/master/06_spark_demo/Dockerfile
-docker build . -t mwernerds/sparkdemo	
-```docker push mwernerds/sparkdemo
+docker build . -t mwernerds/sparkdemo
+docker push mwernerds/sparkdemo
+```
+
+## A full walkthrough in a video
+The following video leads through the full process of development, cloud deployment and cloud execution.
+
+[!Youtube Video](https://img.youtube.com/vi/TDmbSnNeKLk/0.jpg)](https://www.youtube.com/watch?v=TDmbSnNeKLk)
