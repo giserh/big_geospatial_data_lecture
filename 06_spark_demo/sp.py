@@ -63,9 +63,6 @@ def scanPly(url):
     plydata = PlyData.read(temp_file_name)
     data = np.column_stack([plydata["vertex"]["x"],plydata["vertex"]["y"],plydata["vertex"]["z"]])
 
-    plydata = PlyData.read(temp_file_name)
-    data = np.column_stack([plydata["vertex"]["x"],plydata["vertex"]["y"],plydata["vertex"]["z"]])
-
     # Now, let us only emit trees
     tree_conditional = ((data[:,2] > 110) & (data[:,2] < 112));
     trees = data[tree_conditional,:];
@@ -91,7 +88,7 @@ if __name__ == '__main__':
 # Connect the the cluster under the name trees
     conf = SparkConf().setAppName("trees")
     sc = SparkContext(conf=conf)
-
+ 
     print(dataset);
     print("Distributed Loading");
     rdds = sc.parallelize(dataset).flatMap(lambda x: scanPly(x));
@@ -109,5 +106,5 @@ if __name__ == '__main__':
       m[i[0],i[1]] = i[2];
 
     np.save("out.npy",m);
-
+ 
     

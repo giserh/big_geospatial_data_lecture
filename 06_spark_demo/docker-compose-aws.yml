@@ -1,7 +1,7 @@
 version: '3'
 services:
   master:
-    image: mwernerds/demo
+    image: mwernerds/sparkdemo
     command: bin/spark-class org.apache.spark.deploy.master.Master -h master
     hostname: master
     environment:
@@ -21,7 +21,7 @@ services:
           - node.role == manager
 
   worker:
-    image: mwernerds/demo
+    image: mwernerds/sparkdemo
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
     environment:
       SPARK_CONF_DIR: /conf
