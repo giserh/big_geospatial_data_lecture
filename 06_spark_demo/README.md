@@ -391,4 +391,4 @@ docker push mwernerds/sparkdemo
 ## A full walkthrough in a video
 The following video leads through the full process of development, cloud deployment and cloud execution.
 
-[!Youtube Video](https://img.youtube.com/vi/TDmbSnNeKLk/0.jpg)](https://www.youtube.com/watch?v=TDmbSnNeKLk)
+[![Youtube Video](https://img.youtube.com/vi/TDmbSnNeKLk/0.jpg)](https://www.youtube.com/watch?v=TDmbSnNeKLk)
